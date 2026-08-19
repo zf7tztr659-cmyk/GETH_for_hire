@@ -1,0 +1,1 @@
+"""CLI acceptance-test package."""
