@@ -100,15 +100,14 @@ The GitHub connection installed in Codex is separate from GitHub Desktop. It all
 to inspect and, when explicitly authorized, act on remote repositories, issues, pull
 requests, reviews, and workflow checks. Local editing remains rooted in this workspace.
 
-Immediately before this summary was committed:
+Repository setup history:
 
 - GitHub Desktop had configured the local Git author identity.
 - Codex was authenticated to the owner's GitHub account.
-- The GitHub account exposed no published repositories to the Codex connection.
-- This workspace had not yet been initialized as a local Git repository; the summary
-  commit began the local repository history.
-- The intended GitHub repository should be private initially because the package declares
-  a proprietary license and contains the source directive.
+- The workspace was initialized locally and its initial project history was committed.
+- The real project history was consolidated into `GETH_for_hire`.
+- The owner selected the Apache License, Version 2.0 for the published repository.
+- The package metadata and top-level `LICENSE` identify the project as Apache-2.0.
 
 Remote GitHub writes and local commits are distinct actions. Repository publishing,
 pushing, issue creation, pull-request creation, reviews, merges, and other consequential
@@ -171,14 +170,13 @@ design and must:
 
 ## Recommended next steps
 
-1. Publish this repository privately through GitHub Desktop and verify the remote URL.
-2. Push the initial history and confirm that ignored caches, databases, logs, and local
-   application state are absent from GitHub.
-3. Configure the GitHub connection to request confirmation for writes.
-4. Complete Codex Security enrollment and run a standard repository scan.
-5. Triage validated findings, then decide whether a deeper multi-pass scan is warranted.
-6. Run `pytest`, Ruff, and mypy before merging changes.
-7. Prioritize external audit-head anchoring and an explicit verification-resume command,
+1. Confirm that ignored caches, databases, logs, local application state, and credentials
+   remain absent from GitHub.
+2. Configure the GitHub connection to request confirmation for writes.
+3. Complete Codex Security enrollment and run a standard repository scan.
+4. Triage validated findings, then decide whether a deeper multi-pass scan is warranted.
+5. Run `pytest`, Ruff, and mypy before merging changes.
+6. Prioritize external audit-head anchoring and an explicit verification-resume command,
    while retaining the default offline and no-background-work posture.
 
 ## Authoritative references

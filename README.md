@@ -172,3 +172,7 @@ Ordered by expected value and safety risk:
 No owner decision is required to use the offline MVP. Future live-provider access, external
 audit anchoring, partner authority, retention policy, and any background operation all
 require separate owner decisions and are not silently enabled.
+
+## License
+
+Licensed under the Apache License, Version 2.0. See [`LICENSE`](LICENSE).

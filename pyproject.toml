@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Safe, local-first, auditable multi-agent orchestration MVP"
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "Proprietary" }
+license = { text = "Apache-2.0" }
 authors = [{ name = "Geth owner" }]
 dependencies = [
   "pydantic>=2.10,<3",
